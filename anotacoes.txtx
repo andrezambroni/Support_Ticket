@@ -1,0 +1,37 @@
+Caminho de uma Request e Response com Middlewares
+
+Recepção da Request:
+
+A requisição HTTP chega ao servidor configurado no server.js.
+O servidor HTTP chama a função de roteamento definida em ticketRoutes.js.
+
+
+================================================================
+
+Aplicação dos Middlewares:
+
+Antes de chegar ao roteamento, a requisição passa por middlewares definidos em ticketRoutes.js.
+Os middlewares podem realizar tarefas como logging, parsing de corpo, autenticação, etc.
+
+================================================================
+
+Roteamento:
+
+Em ticketRoutes.js, a URL e o método HTTP da requisição são verificados.
+Dependendo da URL e do método, a requisição é encaminhada para a função de controlador apropriada em ticketController.js.
+
+================================================================
+
+Processamento pelo Controlador:
+
+O controlador em ticketController.js processa a requisição.
+O controlador pode manipular os dados dos tickets (armazenados em memória ou em um banco de dados) e executar a lógica necessária (por exemplo, criar, atualizar, excluir tickets).
+
+
+================================================================
+
+
+Envio da Response:
+
+Após processar a requisição, o controlador envia uma resposta HTTP de volta ao cliente.
+A resposta pode incluir dados (por exemplo, o ticket criado ou atualizado) e um código de status HTTP apropriado (por exemplo, 200 OK, 201 Created, 404 Not Found).
